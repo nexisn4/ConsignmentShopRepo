@@ -90,5 +90,15 @@ namespace ConsignmentShopUI
             store.Name = "Seconds are Better";
         }
 
+        private void AddToCart_Click(object sender, EventArgs e)
+        {
+            //figure out how to get selected items
+            //copy that item to shopping cart
+            //remove item ? - maybe not.
+
+            Item selectedItem = (Item)itemsListbox.SelectedItem;
+            shoppingCartData.Add(selectedItem);
+            cartBinding.ResetBindings(false);
+        }
     }
 }
