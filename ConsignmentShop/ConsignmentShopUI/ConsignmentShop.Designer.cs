@@ -37,6 +37,8 @@
             this.makePurchase = new System.Windows.Forms.Button();
             this.vendorListboxLabel = new System.Windows.Forms.Label();
             this.vendorListbox = new System.Windows.Forms.ListBox();
+            this.storeProfitLabel = new System.Windows.Forms.Label();
+            this.storeProfitValue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerText
@@ -70,7 +72,7 @@
             // 
             // addToCart
             // 
-            this.addToCart.Location = new System.Drawing.Point(227, 353);
+            this.addToCart.Location = new System.Drawing.Point(227, 342);
             this.addToCart.Name = "addToCart";
             this.addToCart.Size = new System.Drawing.Size(133, 39);
             this.addToCart.TabIndex = 3;
@@ -99,7 +101,7 @@
             // 
             // makePurchase
             // 
-            this.makePurchase.Location = new System.Drawing.Point(634, 353);
+            this.makePurchase.Location = new System.Drawing.Point(634, 342);
             this.makePurchase.Name = "makePurchase";
             this.makePurchase.Size = new System.Drawing.Size(133, 39);
             this.makePurchase.TabIndex = 6;
@@ -126,11 +128,33 @@
             this.vendorListbox.Size = new System.Drawing.Size(317, 204);
             this.vendorListbox.TabIndex = 7;
             // 
+            // storeProfitLabel
+            // 
+            this.storeProfitLabel.AutoSize = true;
+            this.storeProfitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storeProfitLabel.Location = new System.Drawing.Point(444, 391);
+            this.storeProfitLabel.Name = "storeProfitLabel";
+            this.storeProfitLabel.Size = new System.Drawing.Size(106, 20);
+            this.storeProfitLabel.TabIndex = 9;
+            this.storeProfitLabel.Text = "Store Profit:";
+            // 
+            // storeProfitValue
+            // 
+            this.storeProfitValue.AutoSize = true;
+            this.storeProfitValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storeProfitValue.Location = new System.Drawing.Point(630, 391);
+            this.storeProfitValue.Name = "storeProfitValue";
+            this.storeProfitValue.Size = new System.Drawing.Size(54, 20);
+            this.storeProfitValue.TabIndex = 10;
+            this.storeProfitValue.Text = "$0.00";
+            // 
             // ConsignmentShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 650);
+            this.Controls.Add(this.storeProfitValue);
+            this.Controls.Add(this.storeProfitLabel);
             this.Controls.Add(this.vendorListboxLabel);
             this.Controls.Add(this.vendorListbox);
             this.Controls.Add(this.makePurchase);
@@ -158,6 +182,8 @@
         private System.Windows.Forms.Button makePurchase;
         private System.Windows.Forms.Label vendorListboxLabel;
         private System.Windows.Forms.ListBox vendorListbox;
+        private System.Windows.Forms.Label storeProfitLabel;
+        private System.Windows.Forms.Label storeProfitValue;
     }
 }
 
