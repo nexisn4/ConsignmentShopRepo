@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\study\\ConsignmentShopRepo\\ConsignmentShop\\ConsignmentShopLibrary\\ConsignmentShopLibrary.csproj": {}
+    "c:\\study\\ConsignmentShopRepo\\ConsignmentShop\\ConsignmentShopLibrary\\ConsignmentShopLibrary.csproj": {}
   },
   "projects": {
-    "C:\\study\\ConsignmentShopRepo\\ConsignmentShop\\ConsignmentShopLibrary\\ConsignmentShopLibrary.csproj": {
+    "c:\\study\\ConsignmentShopRepo\\ConsignmentShop\\ConsignmentShopLibrary\\ConsignmentShopLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\study\\ConsignmentShopRepo\\ConsignmentShop\\ConsignmentShopLibrary\\ConsignmentShopLibrary.csproj",
+        "projectUniqueName": "c:\\study\\ConsignmentShopRepo\\ConsignmentShop\\ConsignmentShopLibrary\\ConsignmentShopLibrary.csproj",
         "projectName": "ConsignmentShopLibrary",
-        "projectPath": "C:\\study\\ConsignmentShopRepo\\ConsignmentShop\\ConsignmentShopLibrary\\ConsignmentShopLibrary.csproj",
+        "projectPath": "c:\\study\\ConsignmentShopRepo\\ConsignmentShop\\ConsignmentShopLibrary\\ConsignmentShopLibrary.csproj",
         "packagesPath": "C:\\Users\\nexis\\.nuget\\packages\\",
-        "outputPath": "C:\\study\\ConsignmentShopRepo\\ConsignmentShop\\ConsignmentShopLibrary\\obj\\",
+        "outputPath": "c:\\study\\ConsignmentShopRepo\\ConsignmentShop\\ConsignmentShopLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
