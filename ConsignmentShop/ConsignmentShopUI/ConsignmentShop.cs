@@ -14,18 +14,28 @@ namespace ConsignmentShopUI
     public partial class ConsignmentShop : Form
     {
         private Store store = new Store();
+        private List<Item> shoppingCartData = new List<Item>();
+
         BindingSource itemsBinding = new BindingSource();
+        BindingSource cartBinding = new BindingSource();
 
         public ConsignmentShop()
         {
             InitializeComponent();
-            SetupData();
+            SetupData(); //setup for initial testing/data
 
+            //link listboxes to bindingsource
+            //store.Items
             itemsBinding.DataSource = store.Items;
             itemsListbox.DataSource = itemsBinding;
-            //display 1 field. need to add new property to items to display title + price
             itemsListbox.DisplayMember = "Display"; 
             itemsListbox.ValueMember = "Display";
+
+            //cartItems
+            cartBinding.DataSource = shoppingCartData;
+            shoppingCartListbox.DataSource = cartBinding;
+            shoppingCartListbox.DisplayMember = "Display";
+            shoppingCartListbox.ValueMember = "Display";
         }
 
         private void SetupData()
