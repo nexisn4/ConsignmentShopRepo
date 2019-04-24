@@ -26,7 +26,7 @@ namespace ConsignmentShopUI
 
             //link listboxes to bindingsource
             //store.Items
-            itemsBinding.DataSource = store.Items;
+            itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
             itemsListbox.DataSource = itemsBinding;
             itemsListbox.DisplayMember = "Display"; 
             itemsListbox.ValueMember = "Display";
@@ -99,6 +99,24 @@ namespace ConsignmentShopUI
             Item selectedItem = (Item)itemsListbox.SelectedItem;
             shoppingCartData.Add(selectedItem);
             cartBinding.ResetBindings(false);
+        }
+
+        private void MakePurchase_Click(object sender, EventArgs e)
+        {
+            //mark item as sold
+            //clear the cart
+
+            foreach (Item item in shoppingCartData)
+            {
+                item.Sold = true;
+            }
+
+            shoppingCartData.Clear();
+            cartBinding.ResetBindings(false);
+
+            //reset the items
+            itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
+            itemsBinding.ResetBindings(false);
         }
     }
 }

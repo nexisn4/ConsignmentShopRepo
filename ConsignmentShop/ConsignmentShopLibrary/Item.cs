@@ -21,5 +21,10 @@ namespace ConsignmentShopLibrary
             }
                 
         }
+
+        public Item()
+        {
+            Sold = false;
+        }
     }
 }

@@ -103,6 +103,7 @@
             this.makePurchase.TabIndex = 6;
             this.makePurchase.Text = "Purchase";
             this.makePurchase.UseVisualStyleBackColor = true;
+            this.makePurchase.Click += new System.EventHandler(this.MakePurchase_Click);
             // 
             // ConsignmentShop
             // 
