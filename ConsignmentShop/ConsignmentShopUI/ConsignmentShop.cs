@@ -101,18 +101,25 @@ namespace ConsignmentShopUI
         private void AddToCart_Click(object sender, EventArgs e)
         {
             //figure out how to get selected items
-            //copy that item to shopping cart
-            //remove item ? - maybe not.
+            //copy that item to cart list
+            //refresh the cart 
 
             Item selectedItem = (Item)itemsListbox.SelectedItem;
-            shoppingCartData.Add(selectedItem);
-            cartBinding.ResetBindings(false);
+            //check to not add duplicate items to cart list
+            if (!shoppingCartData.Contains(selectedItem))
+            {
+                shoppingCartData.Add(selectedItem);
+                cartBinding.ResetBindings(false);
+            }
         }
 
         private void MakePurchase_Click(object sender, EventArgs e)
         {
-            //mark item as sold
-            //clear the cart
+            //mark items in the cart as sold
+            //set the money gains for owner, store
+            //clear the cart list
+            //update the items list
+            //update the vendors
 
             foreach (Item item in shoppingCartData)
             {
@@ -120,17 +127,15 @@ namespace ConsignmentShopUI
                 item.Owner.PaymentDue += item.Price * (decimal)item.Owner.Commission;
                 storeProfit += item.Price * (decimal)(1 - item.Owner.Commission);
             }
-
             storeProfitValue.Text = string.Format("${0}", storeProfit);
+
 
             shoppingCartData.Clear();
             cartBinding.ResetBindings(false);
 
-            //reset the items
             itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
             itemsBinding.ResetBindings(false);
 
-            //reset the vendors
             vendorsBinding.ResetBindings(false);
         }
 
