@@ -40,6 +40,7 @@
             this.storeProfitLabel = new System.Windows.Forms.Label();
             this.storeProfitValue = new System.Windows.Forms.Label();
             this.removeCartItem = new System.Windows.Forms.Button();
+            this.emptyCart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // headerText
@@ -102,9 +103,9 @@
             // 
             // makePurchase
             // 
-            this.makePurchase.Location = new System.Drawing.Point(634, 391);
+            this.makePurchase.Location = new System.Drawing.Point(448, 386);
             this.makePurchase.Name = "makePurchase";
-            this.makePurchase.Size = new System.Drawing.Size(133, 39);
+            this.makePurchase.Size = new System.Drawing.Size(319, 39);
             this.makePurchase.TabIndex = 6;
             this.makePurchase.Text = "Purchase";
             this.makePurchase.UseVisualStyleBackColor = true;
@@ -114,7 +115,7 @@
             // 
             this.vendorListboxLabel.AutoSize = true;
             this.vendorListboxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vendorListboxLabel.Location = new System.Drawing.Point(39, 391);
+            this.vendorListboxLabel.Location = new System.Drawing.Point(39, 405);
             this.vendorListboxLabel.Name = "vendorListboxLabel";
             this.vendorListboxLabel.Size = new System.Drawing.Size(76, 20);
             this.vendorListboxLabel.TabIndex = 8;
@@ -124,7 +125,7 @@
             // 
             this.vendorListbox.FormattingEnabled = true;
             this.vendorListbox.ItemHeight = 20;
-            this.vendorListbox.Location = new System.Drawing.Point(43, 414);
+            this.vendorListbox.Location = new System.Drawing.Point(43, 428);
             this.vendorListbox.Name = "vendorListbox";
             this.vendorListbox.Size = new System.Drawing.Size(317, 204);
             this.vendorListbox.TabIndex = 7;
@@ -133,7 +134,7 @@
             // 
             this.storeProfitLabel.AutoSize = true;
             this.storeProfitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storeProfitLabel.Location = new System.Drawing.Point(39, 621);
+            this.storeProfitLabel.Location = new System.Drawing.Point(39, 635);
             this.storeProfitLabel.Name = "storeProfitLabel";
             this.storeProfitLabel.Size = new System.Drawing.Size(106, 20);
             this.storeProfitLabel.TabIndex = 9;
@@ -143,7 +144,7 @@
             // 
             this.storeProfitValue.AutoSize = true;
             this.storeProfitValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storeProfitValue.Location = new System.Drawing.Point(225, 621);
+            this.storeProfitValue.Location = new System.Drawing.Point(225, 635);
             this.storeProfitValue.Name = "storeProfitValue";
             this.storeProfitValue.Size = new System.Drawing.Size(54, 20);
             this.storeProfitValue.TabIndex = 10;
@@ -151,19 +152,30 @@
             // 
             // removeCartItem
             // 
-            this.removeCartItem.Location = new System.Drawing.Point(634, 342);
+            this.removeCartItem.Location = new System.Drawing.Point(448, 342);
             this.removeCartItem.Name = "removeCartItem";
-            this.removeCartItem.Size = new System.Drawing.Size(133, 39);
+            this.removeCartItem.Size = new System.Drawing.Size(155, 39);
             this.removeCartItem.TabIndex = 11;
             this.removeCartItem.Text = "Remove Item";
             this.removeCartItem.UseVisualStyleBackColor = true;
             this.removeCartItem.Click += new System.EventHandler(this.RemoveCartItem_Click);
             // 
+            // emptyCart
+            // 
+            this.emptyCart.Location = new System.Drawing.Point(609, 342);
+            this.emptyCart.Name = "emptyCart";
+            this.emptyCart.Size = new System.Drawing.Size(158, 39);
+            this.emptyCart.TabIndex = 12;
+            this.emptyCart.Text = "Empty Cart";
+            this.emptyCart.UseVisualStyleBackColor = true;
+            this.emptyCart.Click += new System.EventHandler(this.EmptyCart_Click);
+            // 
             // ConsignmentShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 650);
+            this.ClientSize = new System.Drawing.Size(817, 678);
+            this.Controls.Add(this.emptyCart);
             this.Controls.Add(this.removeCartItem);
             this.Controls.Add(this.storeProfitValue);
             this.Controls.Add(this.storeProfitLabel);
@@ -197,6 +209,7 @@
         private System.Windows.Forms.Label storeProfitLabel;
         private System.Windows.Forms.Label storeProfitValue;
         private System.Windows.Forms.Button removeCartItem;
+        private System.Windows.Forms.Button emptyCart;
     }
 }
 

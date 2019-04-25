@@ -2,8 +2,9 @@
 * Initial release that follows requirements.txt.
 
 ## v1.1
-* Can remove items from cart
-* Can't add same items twice
+* Can remove individual items from cart.
+* Can remove all items from cart.
+* Can't add same items twice.
 
 ## v1.2
 * TBA
