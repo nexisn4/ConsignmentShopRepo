@@ -30,7 +30,7 @@ namespace ConsignmentShopUI
             //store.Items
             itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
             itemsListbox.DataSource = itemsBinding;
-            itemsListbox.DisplayMember = "Display"; 
+            itemsListbox.DisplayMember = "Display";
             itemsListbox.ValueMember = "Display";
 
             //cartItems
@@ -117,7 +117,7 @@ namespace ConsignmentShopUI
             foreach (Item item in shoppingCartData)
             {
                 item.Sold = true;
-                item.Owner.PaymentDue += item.Price * (decimal) item.Owner.Commission;
+                item.Owner.PaymentDue += item.Price * (decimal)item.Owner.Commission;
                 storeProfit += item.Price * (decimal)(1 - item.Owner.Commission);
             }
 
@@ -132,6 +132,13 @@ namespace ConsignmentShopUI
 
             //reset the vendors
             vendorsBinding.ResetBindings(false);
+        }
+
+        private void RemoveCartItem_Click(object sender, EventArgs e)
+        {
+            Item selectedItem = (Item)shoppingCartListbox.SelectedItem;
+            shoppingCartData.Remove(selectedItem);
+            cartBinding.ResetBindings(false);
         }
     }
 }
