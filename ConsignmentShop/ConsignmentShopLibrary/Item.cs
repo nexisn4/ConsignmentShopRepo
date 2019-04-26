@@ -11,7 +11,7 @@ namespace ConsignmentShopLibrary
         public decimal Price { get; set; }
         public bool Sold { get; set; }
         public bool PaymentDistributed { get; set; }
-        public Vendor Owner{ get; set; }
+        public Vendor Owner { get; set; }
 
         public string Display
         {
@@ -19,7 +19,7 @@ namespace ConsignmentShopLibrary
             {
                 return string.Format("{0} - ${1}", Title, Price);
             }
-                
+
         }
 
         public Item()

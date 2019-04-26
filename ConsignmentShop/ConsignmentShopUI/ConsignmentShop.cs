@@ -16,7 +16,7 @@ namespace ConsignmentShopUI
         private Store store = new Store();
         private List<Item> shoppingCartData = new List<Item>();
         private decimal storeProfit = 0.00M;
-
+        
         BindingSource itemsBinding = new BindingSource();
         BindingSource cartBinding = new BindingSource();
         BindingSource vendorsBinding = new BindingSource();
@@ -28,7 +28,8 @@ namespace ConsignmentShopUI
 
             //link listboxes to bindingsource
             //store.Items
-            itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
+            //default sort is by Title
+            itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).OrderBy(x => x.Title).ToList();
             itemsListbox.DataSource = itemsBinding;
             itemsListbox.DisplayMember = "Display";
             itemsListbox.ValueMember = "Display";
@@ -40,7 +41,8 @@ namespace ConsignmentShopUI
             shoppingCartListbox.ValueMember = "Display";
 
             //vendors
-            vendorsBinding.DataSource = store.Vendors;
+            //default sort is by FirstName
+            vendorsBinding.DataSource = store.Vendors.OrderBy(x => x.FirstName);
             vendorListbox.DataSource = vendorsBinding;
             vendorListbox.DisplayMember = "Display";
             vendorListbox.ValueMember = "Display";
@@ -51,16 +53,28 @@ namespace ConsignmentShopUI
             //add vendors
             store.Vendors.Add(new Vendor
             {
+                FirstName = "Rachel",
+                LastName = "Davison",
+            });
+
+            store.Vendors.Add(new Vendor
+            {
                 FirstName = "Bill",
                 LastName = "Smith",
             });
-
+                        
             store.Vendors.Add(new Vendor
             {
                 FirstName = "Sue",
                 LastName = "Jones",
             });
 
+            store.Vendors.Add(new Vendor
+            {
+                FirstName = "Amy",
+                LastName = "Davison",
+            });
+            
             //add items
             store.Items.Add(new Item
             {
